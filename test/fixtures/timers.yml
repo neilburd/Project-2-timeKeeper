@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  time_entry: 2017-01-05 10:50:06
+  description: MyText
+  job: one
+
+two:
+  time_entry: 2017-01-05 10:50:06
+  description: MyText
+  job: two
