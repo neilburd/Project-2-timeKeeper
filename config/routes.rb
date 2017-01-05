@@ -1,14 +1,13 @@
 Rails.application.routes.draw do
-  get 'welcome/index'
 
-  resources :jobs
-  resources :timers
+  resources :jobs do
+    resources :timers
+  end
 
   devise_for :users
-
   devise_scope :user do
     authenticated :user do
-      root 'home#index', as: :authenticated_root
+      root 'jobs#index', as: :authenticated_root
     end
 
     unauthenticated do

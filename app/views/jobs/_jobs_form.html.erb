@@ -1,0 +1,12 @@
+<%= form_for @job do |f| %>
+  <h3> Add A New Job</h3>
+  <div class="form-group">
+    <%= f.text_area :title, placeholder: "Title" %>
+    <%= f.text_area :description, placeholder: "Description"%>
+    <%= f.text_area :client, placeholder: "Client" %>
+  </br>
+    <%= f.label :estimate_Of_Time %>
+    <%= f.time_select :estimate  %>
+  </div>
+  <%= f.submit "Add Job", class: "btn btn-primary" %>
+<% end %>
