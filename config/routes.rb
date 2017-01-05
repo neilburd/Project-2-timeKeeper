@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   devise_for :users
   devise_scope :user do
     authenticated :user do
-      root 'jobs#index', as: :authenticated_root
+      root 'jobs#new', as: :authenticated_root
     end
 
     unauthenticated do
