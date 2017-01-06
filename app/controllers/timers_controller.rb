@@ -11,6 +11,7 @@ class TimersController < ApplicationController
   # GET /timers/1
   # GET /timers/1.json
   def show
+
   end
 
   # GET /timers/new
@@ -45,16 +46,16 @@ class TimersController < ApplicationController
   # PATCH/PUT /timers/1
   # PATCH/PUT /timers/1.json
   def update
-    job = Job.find(params[:job_id])
-    @timers = job.timers.find(params[:id])
+    # job = Job.find(params[:job_id])
+    @timer = Timer.find(params[:id])
 
     respond_to do |format|
-      if @timers.update_attributes(params[:timer])
-        format.html { redirect_to @timesr, notice: 'Timer was successfully updated.' }
-        format.json { render :show, status: :ok, location: @timers }
+      if @timer.update_attributes(timer_params)
+        format.html { redirect_to [@timer.job, @timer], notice: 'Timer was successfully updated.' }
+        # format.json { render :show, status: :ok, location: @timer }
       else
         format.html { render :edit }
-        format.json { render json: @timers.errors, status: :unprocessable_entity }
+        # format.json { render json: @timer.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -75,12 +76,12 @@ class TimersController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_timer
-      job = Job.find(params[:job_id])
-      @timers = job.timers.find(params[:id])
+
+      @timer = Timer.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def timer_params
-      params.require(:timer).permit(:time, :description, :job_id)
+      params.require(:timer).permit(:time, :description, :job_id, :hours, :minutes)
     end
 end

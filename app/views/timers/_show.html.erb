@@ -2,7 +2,11 @@
 
 <p>
   <strong>Time:</strong>
-  <%= @timer.time %>
+  <%= @timer.hours %>
+</p>
+<p>
+  <strong>Time:</strong>
+  <%= @timer.minutes %>
 </p>
 
 <p>
@@ -10,9 +14,9 @@
   <%= @timer.description %>
 </p>
 
-<p>
+<p>  
   <strong>Job:</strong>
-  <%= @timer.job %>
+  <%= @timer.job.title %>
 </p>
 
-<%= link_to 'Edit', edit_timer_path(@timer) %>
+<%= link_to 'Edit', edit_job_timer_path(@timer.job, @timer) %>

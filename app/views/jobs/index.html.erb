@@ -9,7 +9,8 @@
     <span class="card-title" ><%= job.title %> for <%= job.client %></span>
     <p><%= job.description %></p>
     </div>
-    <span><%= render :partial => './timers/index_timer'%></span>
+    <span><%= render :partial => './timers/index_timer', locals: {timers: job.timers }%></span>
+    <%= link_to 'Add More Time', new_job_timer_path(job), class:"btn waves-effect waves-teal btn-flat white-text" %>
   </div>
 </div>
 

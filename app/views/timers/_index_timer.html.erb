@@ -1,12 +1,12 @@
 <div class="card">
-<p id="notice"><%= notice %></p>
-
-<!-- <p>Timers</p> -->
+<!-- <p id="notice"><%#= notice %></p> -->
+<%# @jobs.each do |job| %>
 
 <table class="card-content">
   <thead class=" ">
     <tr>
-      <th>Time</th>
+      <th>Hours</th>
+      <th>Minutes</th>
       <th>Description</th>
       <th>Job</th>
       <!-- <th colspan="3"></th> -->
@@ -14,18 +14,22 @@
   </thead>
 
   <tbody>
-    <%  @timers.each do |timer| %>
+
+      <% timers.each do |timer| %>
       <tr>
-        <td><%= timer.time_entry %></td>
+        <td><%= timer.hours %></td>
+        <td><%= timer.minutes %></td>
         <td><%= timer.description %></td>
-        <td><%= timer.job %></td>
-        <td><%#= link_to 'Show', timer %></td>
-        <td><%#= link_to 'Edit', edit_timer_path(timer) %></td>
-        <td><%#= link_to 'Destroy', timer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= timer.job.title %></td>
+        <td><%= link_to 'Show', [timer.job, timer] %></td>
+        <td><%= link_to 'Edit', edit_job_timer_path(timer.job, timer) %></td>
+        <td><%= link_to 'Destroy', [timer.job, timer], method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
+
   </tbody>
 </table>
+<%# end %>
 </div>
 <br>
 

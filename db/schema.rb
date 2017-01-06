@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170105155006) do
+ActiveRecord::Schema.define(version: 20170106141322) do
 
   create_table "jobs", force: :cascade do |t|
     t.string   "title"
@@ -24,11 +24,12 @@ ActiveRecord::Schema.define(version: 20170105155006) do
   end
 
   create_table "timers", force: :cascade do |t|
-    t.time     "time_entry"
     t.text     "description"
     t.integer  "job_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.integer  "hours"
+    t.integer  "minutes"
     t.index ["job_id"], name: "index_timers_on_job_id"
   end
 
