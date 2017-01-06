@@ -15,27 +15,33 @@
       <div class="nav-wrapper">
         <a class="brand-logo" href="/">TimeKeeper</a>
         <% if user_signed_in? %>
-          <%= link_to 'Logout', destroy_user_session_path, method: "delete", class: "right waves-effect waves-light btn-large", id: "nav-mobile" %>
+        <ul class="right">
+          <li><%= link_to 'Add New Job', new_job_path(@job), class:"waves-effect waves-light btn  white-text" %></li>
+          <li><%= link_to 'Logout', destroy_user_session_path, method: "delete", class: "waves-effect waves-light btn right  white-text", id: "nav-mobile" %></li>
         <% else %>
+
         <% end %>
+
+      </ul>
+
       </div>
     </nav>
     </div>
 
     <% if notice %>
-      <p class="alert alert-success"><%= notice %></p>
+      <p class="alert alert-success center"><%= notice %></p>
     <% end %>
     <% if alert %>
-      <p class="alert alert-danger"><%= alert %></p>
+      <p class="alert alert-danger center"><%= alert %></p>
     <% end %>
 
     <div class="container">
       <%= yield %>
     </div>
 
-    <footer>
-      <div class="container">
-        TimeKeeper 2017
+    <footer class=" page-footer">
+      <div class="footer-copyright center">
+        <p>TimeKeeper 2017</p>
       </div>
     </footer>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>

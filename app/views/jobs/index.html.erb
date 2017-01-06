@@ -1,15 +1,16 @@
-<h2> Hello World --- Jobs index </h2>
-<%= link_to 'New Job', new_job_path(@job) %>
+<!-- <h4>All Jobs</h4> -->
+
 <%#= render "form" %>
 <% @jobs.each do |job| %>
-  <div class="collection">
-    <div class="collection-item">
-    <%= link_to 'Edit', edit_job_path(job), class:"btn btn-primary right" %>
-    <h3 class="title"><%= job.title %></h3>
-    <p><%= job.description %> | <%= job.client %></p>
+<div class="col s12 m6">
+  <div class="card blue-grey darken-1">
+    <div class="card-content white-text">
+    <%= link_to 'Edit This Job', edit_job_path(job), class:"btn waves-effect waves-teal btn-flat right white-text" %>
+    <span class="card-title" ><%= job.title %> for <%= job.client %></span>
+    <p><%= job.description %></p>
     </div>
-    <%= render :partial => './timers/index_timer'%>
-
+    <span><%= render :partial => './timers/index_timer'%></span>
   </div>
+</div>
 
 <% end %>

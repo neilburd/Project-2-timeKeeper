@@ -1,24 +1,12 @@
 <p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Title:</strong>
-  <%= @job.title %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @job.description %>
-</p>
-
-<p>
-  <strong>Client:</strong>
-  <%= @job.client %>
-</p>
-
-<p>
-  <strong>User:</strong>
-  <%= @job.owner %>
-</p>
-
-<%= link_to 'Edit', edit_job_path(@job) %> |
-<%= link_to 'Back', jobs_path %>
+<div class="card blue-grey darken-1">
+  <div class="card-content white-text">
+      <span class="card-title"><%= @job.title %></span>
+      <p><%= @job.client %> | <%= @job.description %></p>
+      <p><%= @job.owner %></p>
+  </div>
+  <div class="card-action">
+    <%= link_to 'Edit This Job', edit_job_path(@job) %>
+    <%= link_to 'Show All Jobs', jobs_path %>
+  </div>
+</div>

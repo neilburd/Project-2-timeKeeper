@@ -1,7 +1,7 @@
 <%= form_for(job) do |f| %>
   <% if job.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(job.errors.count, "error") %> prohibited this job from being saved:</h2>
+    <div id="error_explanation" class="card">
+      <span><%= pluralize(job.errors.count, "error") %> prohibited this job from being saved:</span>
 
       <ul>
       <% job.errors.full_messages.each do |message| %>
@@ -10,7 +10,8 @@
       </ul>
     </div>
   <% end %>
-
+<div class="card">
+  <div class="card-content">
   <div class="field">
     <%= f.label :title %></br>
     <%= f.text_field :title %>
@@ -30,7 +31,9 @@
     <%= f.hidden_field :user_id, value: current_user.id %>
   </div>
 
-  <div class="actions">
-    <%= f.submit  class:"btn btn-primary"%>
+  <div class="actions center">
+    <%= f.submit  class:"btn btn-primary "%>
   </div>
+</div>
+</div>
 <% end %>

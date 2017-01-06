@@ -1,7 +1,7 @@
-<h1>Editing Job</h1>
+<h3>Edit Job </h3>
 
 <%= render 'form', job: @job %>
 
-<%= link_to 'Delete', @job, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-danger" %> </br>
-<%= link_to 'Show', @job %> |
-<%= link_to 'Back', jobs_path %>
+<%= link_to 'Delete This Job', @job, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn red darken-1 white-text right" %>
+<%#= link_to 'Show This Jobs', @job, class:"btn white-text"%>
+<%= link_to 'Show All Jobs', jobs_path, class:"btn white-text" %>
