@@ -1,0 +1,33 @@
+<%= form_for([@timers.job, @timers]) do |f| %>
+  <% if @timers.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@timers.errors.count, "error") %> prohibited this timer from being saved:</h2>
+
+      <ul>
+      <% @timers.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= f.label :time_entry%>
+    <%= f.label :time_entry, value: "HH:MM:SS"  %>
+    <%= f.time_field :time_entry%>
+  </div>
+</br>
+  <div class="input-field">
+
+    <%= f.text_area :description %>
+    <%= f.label :description %>
+  </div>
+
+  <div class="field">
+    <%= f.hidden_field :job_id, value: params[:job_id] %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

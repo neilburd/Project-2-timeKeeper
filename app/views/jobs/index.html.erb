@@ -1,3 +1,15 @@
-<h2> Hello World --- Jobs index</h2>
-
+<h2> Hello World --- Jobs index </h2>
+<%= link_to 'New Job', new_job_path(@job) %>
 <%#= render "form" %>
+<% @jobs.each do |job| %>
+  <div class="collection">
+    <div class="collection-item">
+    <%= link_to 'Edit', edit_job_path(job), class:"btn btn-primary right" %>
+    <h3 class="title"><%= job.title %></h3>
+    <p><%= job.description %> | <%= job.client %></p>
+    </div>
+    <%= render :partial => './timers/index_timer'%>
+
+  </div>
+
+<% end %>

@@ -5,6 +5,7 @@ class JobsController < ApplicationController
   # GET /jobs.json
   def index
     @jobs = Job.all
+    @timers = Timer.all
   end
 
   # GET /jobs/1
@@ -19,6 +20,7 @@ class JobsController < ApplicationController
 
   # GET /jobs/1/edit
   def edit
+
   end
 
   # POST /jobs

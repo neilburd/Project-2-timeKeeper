@@ -2,5 +2,6 @@
 
 <%= render 'form', job: @job %>
 
+<%= link_to 'Delete', @job, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-danger" %> </br>
 <%= link_to 'Show', @job %> |
 <%= link_to 'Back', jobs_path %>
