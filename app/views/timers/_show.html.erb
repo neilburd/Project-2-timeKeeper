@@ -1,22 +1,14 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Time:</strong>
-  <%= @timer.hours %>
-</p>
-<p>
-  <strong>Time:</strong>
-  <%= @timer.minutes %>
-</p>
+<div class="card ">
+  <div class="card-content ">
+      <span class="card-title"><%= @timer.hours %>:<%= @timer.minutes %></span>
+      <p><%= @timer.description %></p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @timer.description %>
-</p>
-
-<p>  
-  <strong>Job:</strong>
-  <%= @timer.job.title %>
-</p>
+  </div>
+  <div class="card-action">
+    <%= link_to 'Edit', edit_job_timer_path(@timer.job, @timer) %>
+    <%= link_to 'Show All Jobs', jobs_path %>
+  </div>
+</div>
 
 <%= link_to 'Edit', edit_job_timer_path(@timer.job, @timer) %>
