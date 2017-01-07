@@ -1,9 +1,9 @@
-<div class="card">
+<div class=" table-nested">
 <!-- <p id="notice"><%#= notice %></p> -->
 <%# @jobs.each do |job| %>
 
-<table class="card-content">
-  <thead class=" ">
+<table class="card row striped center">
+  <thead>
     <tr>
       <th>Hours</th>
       <th>Minutes</th>
@@ -17,13 +17,14 @@
 
       <% timers.each do |timer| %>
       <tr>
-        <td><%= timer.hours %></td>
-        <td><%= timer.minutes %></td>
-        <td><%= timer.description %></td>
-        <td><%= timer.job.title %></td>
-        <td><%= link_to 'Show', [timer.job, timer] %></td>
-        <td><%= link_to 'Edit', edit_job_timer_path(timer.job, timer) %></td>
-        <td><%= link_to 'Destroy', [timer.job, timer], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td class=""><%= timer.hours %></td>
+        <td class=""><%= timer.minutes %></td>
+        <td class=""><%= timer.description %></td>
+        <td class=""><%= timer.job.title %></td>
+        <!-- <td><%#= link_to 'Show', [timer.job, timer] %></td> -->
+        <td><%= link_to 'Edit', edit_job_timer_path(timer.job, timer), class:"btn" %></td>
+        <td><%= link_to 'Delete', [timer.job, timer], method: :delete, data: { confirm: 'Are you sure?' }, class: "btn " %></td>
+
       </tr>
     <% end %>
 
@@ -31,6 +32,5 @@
 </table>
 <%# end %>
 </div>
-<br>
 
 <!-- <%#= link_to 'New Timer', new_job_timer_path %> -->

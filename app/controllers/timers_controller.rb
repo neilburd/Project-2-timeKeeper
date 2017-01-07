@@ -4,8 +4,8 @@ class TimersController < ApplicationController
   # GET /timers
   # GET /timers.json
   def index
-    job = Job.find(params[:job_id])
-    @timers = job.timers
+    # job = Job.find(params[:job_id])
+    @timers = Job.timers
   end
 
   # GET /timers/1
