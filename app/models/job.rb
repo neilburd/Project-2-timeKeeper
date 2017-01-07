@@ -2,6 +2,7 @@ class Job < ApplicationRecord
   has_many :timers, dependent: :destroy
 
   belongs_to :user
+  
   def owner
     user.email
   end

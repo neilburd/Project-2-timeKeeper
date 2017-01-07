@@ -1,4 +1,5 @@
 <div class="card">
+<!-- <h4>New Timer</h4> -->
 <%= form_for([@timers.job, @timers]) do |f| %>
   <% if @timers.errors.any? %>
     <div id="error_explanation">
@@ -32,7 +33,7 @@
   </div>
 
   <div class="actions center row">
-    <%= f.submit class:"btn btn-primary center col s12 green lighten-4 green-text text-darken-4" %>
+    <%= f.submit class:"btn btn-primary center col s12 orange lighten-4 green-text text-darken-4" %>
   </div>
 <% end %>
 </div>

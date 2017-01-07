@@ -11,6 +11,8 @@ class JobsController < ApplicationController
   # GET /jobs/1
   # GET /jobs/1.json
   def show
+    @timers = Timer.all
+    @jobs = Job.all
   end
 
   # GET /jobs/new
@@ -20,12 +22,15 @@ class JobsController < ApplicationController
 
   # GET /jobs/1/edit
   def edit
+    @jobs = Job.all
+    @timers = Timer.all
 
   end
 
   # POST /jobs
   # POST /jobs.json
   def create
+    @timers = Timer.all
     @job = Job.new(job_params)
 
     respond_to do |format|

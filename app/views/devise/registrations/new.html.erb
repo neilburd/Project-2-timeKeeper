@@ -1,4 +1,7 @@
-<h2>Sign up</h2>
+<div class="container">
+  <div class="card row">
+    <h3 class= "center">Sign up</h3>
+    <div class="container-content col s12">
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
@@ -21,9 +24,17 @@
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
 
-  <div class="actions">
-    <%= f.submit "Sign up" %>
+  <div class="actions center col s12 valign">
+</br>
+    <%= f.submit "Sign Up", class:"col s12 btn btn-primary orange" %>
   </div>
 <% end %>
+    <div class="center col s12 ">
+</br>
+      <%= render "devise/shared/links" %>
 
-<%= render "devise/shared/links" %>
+    </div>
+  </div>
+</div>
+</div>
+</div>

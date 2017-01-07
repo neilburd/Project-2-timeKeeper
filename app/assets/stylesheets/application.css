@@ -17,13 +17,22 @@
   footer { margin-top: 100px; }
   table, td, th { vertical-align: middle; border: none; }
   th { border-bottom: 1px solid #DDD; }*/
-li{
+/*li{
   list-style: none;
 }
 .table-nested{
-  padding:0 20px 0 20px;
+  margin: 0 0 0 20px;
 }
 
 .button-margin{
   margin: 0 0 10px 0;
-}
+}*/
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
