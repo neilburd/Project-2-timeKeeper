@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Timekeeper</title>
+    <title>Timyr</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -13,17 +13,14 @@
     <div class="navbar-fixed">
     <nav>
       <div class="nav-wrapper container">
-        <a class="brand-logo" href="/">TimeKeeper</a>
+        <a class="brand-logo" href="/">Timyr</a>
+
         <% if user_signed_in? %>
         <ul class="right">
-
-          <li><%= link_to 'Logout', destroy_user_session_path, method: "delete", class: "waves-effect waves-light btn right  white-text", id: "nav-mobile" %></li>
+          <li  ><%= link_to 'Logout', destroy_user_session_path, method: "delete", class: "waves-effect waves-light btn white-text valign", id: "nav-mobile" %></li>
         <% else %>
-
         <% end %>
-
       </ul>
-
       </div>
     </nav>
     </div>
@@ -34,8 +31,6 @@
       <% if alert %>
         <p class="alert alert-danger center col s12"><%= alert %></p>
       <% end %>
-
-      <li><%= link_to "Add New Job", new_job_path(@job), class:"waves-effect waves-light btn white-text col s12" %></li>
     </div>
     <div class="container">
       <%= yield %>
