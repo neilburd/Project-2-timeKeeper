@@ -6,6 +6,7 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Fugaz+One" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
   </head>
 
@@ -13,11 +14,12 @@
     <div class="navbar-fixed">
     <nav>
       <div class="nav-wrapper container">
-        <a class="brand-logo" href="/">Timyr</a>
+        <a class="brand-logo" href="/">Job Tymr</a>
 
         <% if user_signed_in? %>
         <ul class="right">
-          <li  ><%= link_to 'Logout', destroy_user_session_path, method: "delete", class: "waves-effect waves-light btn white-text valign", id: "nav-mobile" %></li>
+          <li >Signed in as <%= current_user.email %></li>
+          <li  ><%= link_to "Logout", destroy_user_session_path, method: "delete", class: "waves-effect waves-light btn white-text valign", id: "nav-mobile" %></li>
         <% else %>
         <% end %>
       </ul>
@@ -36,11 +38,32 @@
       <%= yield %>
     </div>
 
-    <footer class=" page-footer">
-      <div class="container center">
-        <p>TimeKeeper 2017</p>
-      </div>
-    </footer>
+
+        <footer class="page-footer">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">About <span class="brand-logo">Job Tymr</span></h5>
+                <p class="grey-text text-lighten-4">Use this service to keep track of the time it takes to get your work done.</p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Links</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2017 Copyright* Neil Burdick
+            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            </div>
+          </div>
+        </footer>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
   </body>
 </html>

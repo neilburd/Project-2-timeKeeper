@@ -13,20 +13,7 @@
  *= require_tree .
  *= require_self
  */
-  /*body { padding-top: 100px; }
-  footer { margin-top: 100px; }
-  table, td, th { vertical-align: middle; border: none; }
-  th { border-bottom: 1px solid #DDD; }*/
-/*li{
-  list-style: none;
-}
-.table-nested{
-  margin: 0 0 0 20px;
-}
 
-.button-margin{
-  margin: 0 0 10px 0;
-}*/
 body {
     display: flex;
     min-height: 100vh;
@@ -35,4 +22,11 @@ body {
 
   main {
     flex: 1 0 auto;
+  }
+  .margin-bottom{
+    margin: 0 0 10px 0;
+  }
+
+  .brand-logo{
+    font-family: 'Fugaz One', cursive;
   }

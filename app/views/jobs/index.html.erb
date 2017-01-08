@@ -1,16 +1,10 @@
 <!-- adds the ADD JOB button to the top -->
 <div class="row">
   <div class="container  center">
-    <p>Signed in as <%= current_user.email %></p>
     <%= link_to "Add New Job", new_job_path(@job), class:"waves-effect waves-light btn white-text col s12 center orange" %>
   </div>
-
-  <div>
-    <% @jobs.order('created_at DESC').each do |job| %>
-    <%= render :partial => "form" %>
-    <% end %>
-  </div>
 </div>
+  <%#= render :partial => "new_form" %>
 </div>
 <!-- Dispalys all the jobs with the times nested inside -->
 <%  %>

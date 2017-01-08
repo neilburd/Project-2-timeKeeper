@@ -10,8 +10,7 @@
       </ul>
     </div>
   <% end %>
-<div class="card">
-  <div class="card-content">
+
   <div class="field">
     <%= f.label :title %></br>
     <%= f.text_field :title %>
@@ -31,9 +30,8 @@
     <%= f.hidden_field :user_id, value: current_user.id %>
   </div>
 
-  <div class="actions center">
-    <%= f.submit  class:"btn btn-primary "%>
+  <div class="actions center col s12 ">
+    <%= f.submit  class:"col s12 btn btn-primary orange "%>
+  <hr />
   </div>
-</div>
-</div>
-<% end %>
+  <% end %>

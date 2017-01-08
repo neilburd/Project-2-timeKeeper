@@ -1,12 +1,12 @@
 <!-- <p id="notice"><%#= notice %></p> -->
-<div class="card ">
+<div class="card">
   <div class="card-content ">
       <span class="card-title"><%= @job.title %></span>
       <p><%= @job.client %> | <%= @job.description %></p>
       <p><%= @job.owner %></p>
   </div>
-  <div class="card-action">
-    <%= link_to 'Edit This Job', edit_job_path(@job) %>
-    <%= link_to 'Show All Jobs', jobs_path %>
+  <div class="">
+    <%= link_to 'Show All Jobs', jobs_path, class:"btn btn-primary" %>
+    <%= link_to 'Edit This Job', edit_job_path(@job),  class:"btn btn-primary" %>
   </div>
 </div>

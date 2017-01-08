@@ -1,5 +1,17 @@
-<h3>Add New Job</h3>
+<div class="container">
+  <div class="card row">
+    <h3 class= "center">Add New Job</h3>
+    <div class="container-content col s12">
+    <%= render 'form', job: @job %>
 
-<%= render 'form', job: @job %>
+    <div class=" container-content col s12 margin-bottom">
 
-<%#= link_to 'Show All Jobs', jobs_path, class:" btn btn-primary white-text" %>
+      <%#= link_to 'Delete This Job', @job, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn red darken-1 col s3 white-text right" %>
+      <%= link_to 'Show All Jobs', jobs_path, class:"btn col s8 white-text" %>
+
+    </div>
+
+
+    </div>
+  </div>
+</div>

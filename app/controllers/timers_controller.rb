@@ -30,15 +30,15 @@ class TimersController < ApplicationController
   # POST /timers.json
   def create
     job = Job.find(params[:job_id])
-    @timers = job.timers.create(timer_params)
+    @timer = job.timers.create(timer_params)
 
     respond_to do |format|
-      if @timers.save
-        format.html { redirect_to @timers.job, notice: 'Timer was successfully created.' }
+      if @timer.save
+        format.html { redirect_to [@timer.job, @timer], notice: 'Time was successfully added.' }
         format.json { render :show, status: :created, location: @timer }
       else
         format.html { render :new }
-        format.json { render json: @timers.errors, status: :unprocessable_entity }
+        format.json { render json: @timer.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -51,7 +51,7 @@ class TimersController < ApplicationController
 
     respond_to do |format|
       if @timer.update_attributes(timer_params)
-        format.html { redirect_to [@timer.job, @timer], notice: 'Timer was successfully updated.' }
+        format.html { redirect_to [@timer.job, @timer], notice: 'Time was successfully updated.' }
         # format.json { render :show, status: :ok, location: @timer }
       else
         format.html { render :edit }
@@ -68,7 +68,7 @@ class TimersController < ApplicationController
 
     @timers.destroy
     respond_to do |format|
-      format.html { redirect_to timers_url, notice: 'Timer was successfully destroyed.' }
+      format.html { redirect_to jobs_url, notice: 'Timer was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

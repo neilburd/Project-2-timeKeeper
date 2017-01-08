@@ -1,5 +1,12 @@
-<h5>Editing Timer</h5>
+<div class="container">
+  <div class="card row">
+    <h3 class= "center">Edit this Entry</h3>
+    <div class="container-content col s12">
 
-<%= render 'form', timer: @timer %>
-
-<%= link_to 'Show All', job_timer_path %>
+      <%= render 'form', timer: @timer %>
+      <div class="container col s12">
+        <%= link_to 'Show All', job_timer_path, class:"col s12 btn btn-primary margin-bottom" %>
+      </div>
+    </div>
+  </div>
+</div>

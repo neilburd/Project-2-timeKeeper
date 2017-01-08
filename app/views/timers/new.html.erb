@@ -1,3 +1,15 @@
-<h3>New Timer</h3>
+<div class="container">
+  <div class="card row">
+    <h3 class= "center">Add More Time</h3>
+    <div class="container-content col s12">
 
-<%= render 'form', timer: @timer %>
+      <%= render 'form', timer: @timer %>
+
+      <div class=" container-content col s12 margin-bottom">
+        <%= link_to 'Show All Jobs', jobs_path, class:"btn col s12 white-text" %>
+
+      </div>
+
+    </div>
+  </div>
+</div>

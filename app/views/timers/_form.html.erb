@@ -12,29 +12,30 @@
       </ul>
     </div>
   <% end %>
-<div class="card-content">
-<div class="row">
-  <div class="col s1">
+
+  <div class="col s2">
     <%= f.label :hours %>
     <%= f.number_field :hours %>
   </div>
-  <div class="col s1">
+
+  <div class="col s2">
     <%= f.label :minutes %>
     <%= f.number_field :minutes %>
   </div>
-  <div class="col s10">
+
+  <div class="col s8">
     <%= f.label :description %>
     <%= f.text_area :description %>
   </div>
-</div>
+
 
   <div class="field"> <!-- this needs to add the proper job_id -->
     <%= f.hidden_field :job_id, value: @timers.job_id %>
   </div>
 
-  <div class="actions center row">
-    <%= f.submit class:"btn btn-primary center col s12 orange lighten-4 green-text text-darken-4" %>
+  <div class="actions center col s12 margin-bottom">
+    <%= f.submit "Add Time", class:"col s12 btn btn-primary orange" %>
   </div>
+</div>
 <% end %>
-</div>
-</div>
+<br />

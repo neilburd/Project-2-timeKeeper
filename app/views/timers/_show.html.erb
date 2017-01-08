@@ -1,14 +1,11 @@
 
-<div class="card ">
+<div class="card">
   <div class="card-content ">
-      <span class="card-title"><%= @timer.hours %>:<%= @timer.minutes %></span>
-      <p><%= @timer.description %></p>
-
+    <span class="card-title">Added <strong><%= @timer.hours %>:<%= @timer.minutes %></strong> to <%= @timer.job.title %></span>
+    <p><%= @timer.description %></p>
   </div>
   <div class="card-action">
-    <%= link_to 'Edit', edit_job_timer_path(@timer.job, @timer) %>
     <%= link_to 'Show All Jobs', jobs_path %>
+    <%= link_to 'Edit this Time Entry', edit_job_timer_path(@timer.job, @timer) %>
   </div>
 </div>
-
-<%= link_to 'Edit', edit_job_timer_path(@timer.job, @timer) %>
