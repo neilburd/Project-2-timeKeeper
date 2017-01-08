@@ -1,8 +1,14 @@
 <div class="container">
   <div class="card row">
-    <h3 class= "center">Add More Time</h3>
+    <h3 class= "center">Add Time</h3>
     <div class="container-content col s12">
 
+      <div class="stopwatch">
+        <h1><span id="hours">0</span>:<span id="minutes">0</span>:<span id="seconds">0</span></h1>
+        <button id="start">start</button>
+        <button id="stop">stop</button>
+        <button id="clear">clear</button>
+      </div>
       <%= render 'form', timer: @timer %>
 
       <div class=" container-content col s12 margin-bottom">
