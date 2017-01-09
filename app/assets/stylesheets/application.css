@@ -30,3 +30,7 @@ body {
   .brand-logo{
     font-family: 'Fugaz One', cursive;
   }
+
+  .drop-shadow {
+    text-shadow: 2px 2px rgba(200,100,50,.5);
+  }
