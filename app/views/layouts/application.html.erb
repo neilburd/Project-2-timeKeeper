@@ -17,7 +17,7 @@
         <a class="brand-logo orange-text text-darken-4 drop-shadow" href="/">Job Tymr</a>
 
         <% if user_signed_in? %>
-        <ul class="right ">
+        <ul class="right">
           <li >Signed in as <%= current_user.email %></li>
           <li  ><%= link_to "Logout", destroy_user_session_path, method: "delete", class: "waves-effect waves-light btn white-text valign", id: "nav-mobile" %></li>
         <% else %>
@@ -34,7 +34,7 @@
         <p class="alert alert-danger center col s12"><%= alert %></p>
       <% end %>
     </div>
-    <div class="container">
+    <div class="container wrapper">
       <%= yield %>
     </div>
 

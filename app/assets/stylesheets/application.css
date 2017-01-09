@@ -19,7 +19,9 @@ body {
     min-height: 100vh;
     flex-direction: column;
   }
-
+  .wrapper {
+    min-height: 60vh;
+  }
   main {
     flex: 1 0 auto;
   }
