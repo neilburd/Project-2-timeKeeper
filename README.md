@@ -21,4 +21,6 @@ My insiraption for this project came from when I was freelancing. I often wanted
   * Materialize css was ued for site styling.
   * I created the Job and Timer models using scaffold.
 
-  
+
+## What I did not finish
+The one main thing I would Like to add to this is the Timer function. So that a user has a stopwatch on the page to keep track of the time spent on a job.
