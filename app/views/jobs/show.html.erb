@@ -1,12 +1,15 @@
-<!-- <p id="notice"><%#= notice %></p> -->
-<div class="card">
-  <div class="card-content ">
-      <span class="card-title"><%= @job.title %></span>
-      <p><%= @job.client %> | <%= @job.description %></p>
-      <p><%= @job.owner %></p>
+<div class="container">
+  <div class="card row">
+    <h3 class= "center">Job Added</h3>
+    <div class="container-content col s12">
+      <span class="card-title ">Job Title: <strong><%= @job.title %></strong></span>
+      <p>Client: <strong> <%= @job.client %> </strong></p>
+      <p>Description: <strong><%= @job.description %></strong></p>
+      <p>Created By: <strong><%= @job.owner %></strong></p>
   </div>
-  <div class="">
+  <div class="container-content col s12 margin-bottom center">
     <%= link_to 'Show All Jobs', jobs_path, class:"btn btn-primary" %>
     <%= link_to 'Edit This Job', edit_job_path(@job),  class:"btn btn-primary" %>
   </div>
+</div>
 </div>
