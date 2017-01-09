@@ -12,12 +12,12 @@
 
   <body>
     <div class="navbar-fixed">
-    <nav class="orange lighten-1">
+    <nav class="orange lighten-2 orange-text text-darken-4">
       <div class="nav-wrapper container">
-        <a class="brand-logo" href="/">Job Tymr</a>
+        <a class="brand-logo orange-text text-darken-4 drop-shadow" href="/">Job Tymr</a>
 
         <% if user_signed_in? %>
-        <ul class="right">
+        <ul class="right ">
           <li >Signed in as <%= current_user.email %></li>
           <li  ><%= link_to "Logout", destroy_user_session_path, method: "delete", class: "waves-effect waves-light btn white-text valign", id: "nav-mobile" %></li>
         <% else %>
@@ -38,28 +38,26 @@
       <%= yield %>
     </div>
 
-        <footer class="page-footer orange lighten-1">
+        <footer class="page-footer orange lighten-2 ">
           <div class="container">
             <div class="row">
               <div class="col l6 s12">
-                <h5 class="white-text">About <span class="brand-logo">Job Tymr</span></h5>
-                <p class="grey-text text-lighten-4">Use this service to keep track of the time it takes to get your work done.</p>
+                <h5 class="orange-text text-darken-4">About <span class="brand-logo drop-shadow">Job Tymr</span></h5>
+                <p class="orange-text text-darken-4">Use this service to keep track of the time it takes to get your work done. This was created by Neil Burdick for the <a href="https://generalassemb.ly/" class="deep-orange-text text-accent-4">General Assembly</a> WDI program.</p>
               </div>
               <div class="col l4 offset-l2 s12">
-                <h5 class="white-text">Links</h5>
+                <h5 class="orange-text text-darken-4 brand-logo">My Links</h5>
                 <ul>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+                  <li><a class="orange-text text-darken-4" href="https://github.com/neilburd">Github</a></li>
+                  <li><a class="orange-text text-darken-4" href="https://www.linkedin.com/in/neil-burdick-8a0b7a2b">LinkedIn 2</a></li>
+                  <li><a class="orange-text text-darken-4" href="https://www.instagram.com/neil_burdick/">Instagram</a></li>
                 </ul>
               </div>
             </div>
           </div>
-          <div class="footer-copyright">
+          <div class="footer-copyright orange-text text-darken-4">
             <div class="container">
             © 2017 Copyright* Neil Burdick
-            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
             </div>
           </div>
         </footer>
